@@ -1,0 +1,19 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class FormPage {
+    public static void submitForm(Webdriver driver) {
+        driver.findElement(By.id("first-name")).sendKeys("Hershey");
+        driver.findElement(By.id("last-name")).sendKeys("Galvez");
+        driver.findElement(By.id("job-title")).sendKeys("IT");
+        driver.findElement(By.id("radio-button-2")).click();
+        driver.findElement(By.id("checkbox-2")).click();
+        driver.findElement(By.id("select-menu")).click();
+        driver.findElement(By.cssSelector("option[value='4']")).click();
+        driver.findElement(By.id("datepicker")).sendKeys("04/22/2021");
+        driver.findElement(By.id("datepicker")).sendKeys(Keys.RETURN);
+        driver.findElement(By.cssSelector(".btn.btn-lg.btn-primary")).click();
+    }
+}
